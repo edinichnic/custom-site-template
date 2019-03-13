@@ -2,7 +2,7 @@ server {
     listen       80;
     listen       443 ssl;
     server_name  {vvv_hosts};
-    root         {vvv_path_to_site}/public_html;
+    root         {vvv_path_to_site}/app;
 
     # Nginx logs
     error_log    {vvv_path_to_site}/log/nginx-error.log;
@@ -13,7 +13,4 @@ server {
 
     {{TLS_CERT}}
     {{TLS_KEY}}
-
-    # Nginx rules for WordPress, rewrite rules, permalinks, etc
-    include      /etc/nginx/nginx-wp-common.conf;
 }
